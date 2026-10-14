@@ -9,9 +9,14 @@
     tools:context=".MainActivity" >
 
     <ImageView
-        android:id="@+id/imgFondo"
         android:layout_width="0dp"
-        android:layout_height="0dp" />
+        android:layout_height="0dp"
+        android:src="@drawable/fondo_login"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <!-- Crear tarjeta principal -->
     <androidx.cardview.widget.CardView
@@ -46,11 +51,25 @@
                 android:layout_marginBottom="30dp" />
 
             <EditText
+                android:id="@+id/etNombre "
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@drawable/bg_input"
+                android:hint=" Usuario"
+                android:paddingStart="20dp"
+                android:paddingEnd="15dp"
+                android:textColor="#333333"
+                android:textColorHint="#FFCBBF"
+                android:inputType="textEmailAddress"
+                android:padding="10dp"
+                android:drawableStart="@drawable/usuario"/>
+
+            <EditText
                 android:id="@+id/etCorreo"
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
                 android:background="@drawable/bg_input"
-                android:hint="Correo electronico"
+                android:hint=" Correo electronico"
                 android:paddingStart="20dp"
                 android:paddingEnd="15dp"
                 android:textColor="#333333"
@@ -64,7 +83,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
                 android:background="@drawable/bg_input"
-                android:hint="Contraseña"
+                android:hint=" Contraseña"
                 android:paddingStart="20dp"
                 android:paddingEnd="15dp"
                 android:textColor="#333333"
